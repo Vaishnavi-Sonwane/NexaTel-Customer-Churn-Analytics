@@ -13,7 +13,8 @@ if not DATA.exists():
     DATA = ROOT / "cleaned_data"
 
 COLORS = ["#16B8A6", "#4C7CF3", "#F3A642", "#8A72E8", "#E56F82", "#44A7D8"]
-PLOT = dict(template="plotly_white", color_discrete_sequence=COLORS, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", margin=dict(l=10, r=10, t=44, b=10), font=dict(family="Inter, Segoe UI, sans-serif", color="#344054"))
+px.defaults.color_discrete_sequence = COLORS
+PLOT = dict(template="plotly_white", paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", margin=dict(l=10, r=10, t=44, b=10), font=dict(family="Inter, Segoe UI, sans-serif", color="#344054"))
 
 
 @st.cache_data(show_spinner="Preparing the customer view…")
